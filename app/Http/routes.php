@@ -11,9 +11,36 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::group(['middleware' => ['web']], function () {
+    Route::get('/', function () {
+        return view('welcome');
+    });
+    Route::any('admin/login', 'Admin\LoginController@login');
+    Route::get('admin/code', 'Admin\LoginController@code');
+
+//});
+
+//路由前缀,  对应的方法的命名空间 (简化路由分组)
+Route::group(['middleware' => ['web', 'admin.login'],'prefix'=>'admin', 'namespace' => 'Admin'], function () {
+
+    Route::get('index', 'IndexController@index');
+    Route::get('info', 'IndexController@info');
+    Route::get('quit', 'LoginController@quit');
+    Route::any('pass', 'IndexController@pass');
+
+
 });
+Route::any('admin/pass', 'Admin\IndexController@pass');
+
+
+
+
+
+
+
+
+
+
 
 Route::get('/hello', function () {
     return view('hello');
