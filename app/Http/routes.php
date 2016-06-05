@@ -21,57 +21,18 @@
 //});
 
 //路由前缀,  对应的方法的命名空间 (简化路由分组)
-Route::group(['middleware' => ['web', 'admin.login'],'prefix'=>'admin', 'namespace' => 'Admin'], function () {
+Route::group(['middleware' => ['admin.login'],'prefix'=>'admin', 'namespace' => 'Admin'], function () {
 
     Route::get('index', 'IndexController@index');
     Route::get('info', 'IndexController@info');
     Route::get('quit', 'LoginController@quit');
     Route::any('pass', 'IndexController@pass');
 
+    Route::post('cate/changeorder', 'CategoryController@changeorder');
+
+    Route::resource('category', 'CategoryController');
 
 });
-Route::any('admin/pass', 'Admin\IndexController@pass');
 
 
 
-
-
-
-
-
-
-
-
-Route::get('/hello', function () {
-    return view('hello');
-});
-
-
-Route::get('testCsrf',function(){
-    $csrf_field = csrf_field();
-    $html = <<<GET
-        <form method="POST" action="/testCsrf">
-            {$csrf_field}
-            <input type="submit" value="Test"/>
-        </form>
-GET;
-    return $html;
-});
-
-Route::post('testCsrf',function(){
-    return 'Success!';
-});
-
-
-Route::group(['middleware'=>'test:male'],function(){
-    Route::get('/write/laravelacademy',function(){
-        //使用Test中间件
-    });
-    Route::get('/update/laravelacademy',function(){
-        //使用Test中间件
-    });
-});
-
-Route::get('/age/refuse',['as'=>'refuse',function(){
-    return "18岁以上男子才能访问！";
-}]);
