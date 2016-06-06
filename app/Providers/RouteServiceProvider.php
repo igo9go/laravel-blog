@@ -58,4 +58,16 @@ class RouteServiceProvider extends ServiceProvider
             require app_path('Http/routes.php');
         });
     }
+
+    /**
+ * 定义路由模型绑定，模式过滤器等
+ *
+ * @param  \Illuminate\Routing\Router  $router
+ * @return void
+ * @translator  http://laravelacademy.org
+ */
+    //public function boot(Router $router){
+    //    $router->pattern('id', '[0-9]+');
+    //    parent::boot($router);
+    //}
 }
