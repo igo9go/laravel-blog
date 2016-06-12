@@ -72,9 +72,7 @@
         layer.confirm('您确定要删除这篇文章吗？', {
             btn: ['确定','取消'] //按钮
         }, function(){
-            $.post("{{url('admin/article/')}}/"+art_id,
-                    {'_method':'delete','_token':"{{csrf_token()}}"},
-                    function (data) {
+            $.post("{{url('admin/article/')}}/"+art_id,{'_method':'delete','_token':"{{csrf_token()}}"},function (data) {
                 if(data.status==0){
                     location.href = location.href;
                     layer.msg(data.msg, {icon: 6});

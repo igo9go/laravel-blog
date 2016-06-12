@@ -11,14 +11,13 @@
 |
 */
 
-//Route::group(['middleware' => ['web']], function () {
-    Route::get('/', function () {
-        return view('welcome');
-    });
-    Route::any('admin/login', 'Admin\LoginController@login');
-    Route::get('admin/code', 'Admin\LoginController@code');
 
-//});
+Route::get('/', 'Home\IndexController@index');
+Route::get('/cate/{cate_id}', 'Home\IndexController@cate');
+Route::get('/a/{art_id}', 'Home\IndexController@article');
+
+Route::any('admin/login', 'Admin\LoginController@login');
+Route::get('admin/code', 'Admin\LoginController@code');
 
 //路由前缀,  对应的方法的命名空间 (简化路由分组)
 Route::group(['middleware' => ['admin.login'],'prefix'=>'admin', 'namespace' => 'Admin'], function () {
@@ -32,6 +31,17 @@ Route::group(['middleware' => ['admin.login'],'prefix'=>'admin', 'namespace' => 
 
     Route::resource('category', 'CategoryController');
     Route::resource('article', 'ArticleController');
+
+    Route::post('links/changeorder', 'LinksController@changeOrder');
+    Route::resource('links', 'LinksController');
+
+    Route::post('navs/changeorder', 'NavsController@changeOrder');
+    Route::resource('navs', 'NavsController');
+
+    Route::get('config/putfile', 'ConfigController@putFile');
+    Route::post('config/changecontent', 'ConfigController@changeContent');
+    Route::post('config/changeorder', 'ConfigController@changeOrder');
+    Route::resource('config', 'ConfigController');
 
     Route::any('upload', 'CommonController@upload');
 

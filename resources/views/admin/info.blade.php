@@ -1,7 +1,6 @@
 @extends('layouts.admin')
-@section('content');
-
-<!--面包屑导航 开始-->
+@section('content')
+        <!--面包屑导航 开始-->
 <div class="crumb_warp">
     <!--<i class="fa fa-bell"></i> 欢迎使用登陆网站后台，建站的首选工具。-->
     <i class="fa fa-home"></i> <a href="{{url('admin/info')}}">首页</a> &raquo; 系统基本信息
@@ -36,18 +35,14 @@
             <li>
                 <label>运行环境</label><span>{{$_SERVER['SERVER_SOFTWARE']}}</span>
             </li>
-            {{--<li>
-                <label>PHP运行方式</label><span>apache2handler</span>
-            </li>--}}
             <li>
-                <label>版本</label><span>v-0.1</span>
+                <label>版本</label><span>v-1.0</span>
             </li>
             <li>
-                <label>上传附件限制</label><span><?php echo get_cfg_var("upload_max_filesize")
-                            ? get_cfg_var("upload_max_filesize") : "不允许上传附件"; ?></span>
+                <label>上传附件限制</label><span><?php echo get_cfg_var ("upload_max_filesize")?get_cfg_var ("upload_max_filesize"):"不允许上传附件"; ?></span>
             </li>
             <li>
-                <label>北京时间</label><span><?php echo date('Y年m月d日 H时i分s秒'); ?></span>
+                <label>北京时间</label><span><?php echo date('Y年m月d日 H时i分s秒')?></span>
             </li>
             <li>
                 <label>服务器域名/IP</label><span>{{$_SERVER['SERVER_NAME']}} [ {{$_SERVER['SERVER_ADDR']}} ]</span>
@@ -70,8 +65,7 @@
                 <label>官方交流网站：</label><span><a href="#">http://bbs.houdunwang.com</a></span>
             </li>
             <li>
-                <label>官方交流QQ群：</label><span><a href="#"><img border="0"
-                                                              src="http://pub.idqqimg.com/wpa/images/group.png"></a></span>
+                <label>官方交流QQ群：</label><span><a href="#"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png"></a></span>
             </li>
         </ul>
     </div>

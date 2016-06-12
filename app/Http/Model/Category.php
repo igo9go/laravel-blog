@@ -11,9 +11,6 @@ class Category extends Model
     public $timestamps=false;
     protected $guarded=[];
 
-    //可以填充的字段
-    //protected $fillable=[];
-
     public function tree()
     {
         $categorys = $this->orderBy('cate_order','asc')->get();
