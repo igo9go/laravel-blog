@@ -1,0 +1,75 @@
+
+.post-col {
+    width: 40px;
+    position: absolute;
+}
+
+.widget-vote {
+    position: relative;
+    width: 40px;
+    height: 54px;
+    line-height: 54px;
+    font-size: 18px;
+    background: #f3f3f3;
+    color: #666;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+}
+
+.widget-vote .like {
+    top: 0;
+    height: 36px;
+}
+
+.widget-vote button {
+    position: absolute;
+    left: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent url("https://sf-static.b0.upaiyun.com/v-576b52d9/global/img/vote-bg.svg") 0 0 no-repeat;
+    background-size: auto 60px;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+.widget-vote {
+    position: relative;
+    width: 40px;
+    height: 54px;
+    line-height: 54px;
+    font-size: 18px;
+    background: #f3f3f3;
+    color: #666;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+}
+.widget-vote .hate {
+    bottom: 0;
+    height: 18px;
+    background-position: 0 bottom;
+}

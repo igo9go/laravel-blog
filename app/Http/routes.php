@@ -47,5 +47,11 @@ Route::group(['middleware' => ['admin.login'],'prefix'=>'admin', 'namespace' => 
 
 });
 
+Route::any('admin/vote','Admin\VoteController@test');
 
+Route::group(['prefix' => 'ajax', 'namespace' => 'Admin'], function(){
 
+    Route::post('like', 'VoteController@like');
+    Route::post('hate', 'VoteController@hate');
+
+});

@@ -7,6 +7,9 @@
     <link href="{{asset('resources/views/home/css/index.css')}}" rel="stylesheet">
     <link href="{{asset('resources/views/home/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('resources/views/home/css/new.css')}}" rel="stylesheet">
+    <link href="{{asset('resources/views/home/css/vote.css')}}" rel="stylesheet">
+    <script type="text/javascript" src="{{asset('resources/views/admin/style/js/jquery.js')}}"></script>
+    <script src="{{asset('resources/views/home/js/vote.js')}}"></script>
     <!--[if lt IE 9]>
     <script src="{{asset('resources/views/home/js/modernizr.js')}}"></script>
     <![endif]-->

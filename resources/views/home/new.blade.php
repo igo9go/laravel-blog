@@ -3,12 +3,30 @@
     <title>{{$field->art_title}} - {{Config::get('web.web_title')}}</title>
     <meta name="keywords" content="{{$field->art_tag}}" />
     <meta name="description" content="{{$field->art_description}}" />
+    <meta name="_token" content="{{ csrf_token() }}"/>
 @endsection
 @section('content')
     <article class="blogs">
         <h1 class="t_nav"><span>您当前的位置：<a href="{{url('/')}}">首页</a>&nbsp;&gt;&nbsp;<a href="{{url('cate/'.$field->cate_id)}}">{{$field->cate_name}}</a></span><a href="{{url('/')}}" class="n1">网站首页</a><a href="{{url('cate/'.$field->cate_id)}}" class="n2">{{$field->cate_name}}</a></h1>
         <div class="index_about">
-            <h2 class="c_titile">{{$field->art_title}}</h2>
+
+            <div class="post-col">
+                <div class="widget-vote">
+                    <button type="button" class="like" data-id="{{$field->art_id}}" data-type="question" data-do="like" data-toggle="tooltip" data-placement="top" title="问题对人有帮助，内容完整，我也想知道答案">
+                        <span class="sr-only"></span>
+                    </button>
+
+                    <span class="count">{{$vote_num}}</span>
+
+                    <button type="button" class="hate" data-id="{{$field->art_id}}" data-type="question" data-do="hate" data-toggle="tooltip" data-placement="bottom" title="问题没有实际价值，缺少关键内容，没有改进余地">
+                        <span class="sr-only"></span>
+                    </button>
+                </div>
+            </div>
+
+            <h2 class="c_titile">
+                {{$field->art_title}}
+            </h2>
             <p class="box_c"><span class="d_time">发布时间：{{date('Y-m-d',$field->art_time)}}</span><span>编辑：{{$field->art_editor}}</span><span>查看次数：{{$field->art_view}}</span></p>
             <ul class="infos">
                 {!! $field->art_content !!}
