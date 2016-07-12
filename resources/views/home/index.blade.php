@@ -34,7 +34,7 @@
         </h2>
         <div class="bloglist left">
             @foreach($data as $d)
-            <h3>{{$d->art_title}}</h3>
+            <h3> <a title="{{$d->art_title}}" href="{{url('a/'.$d->art_id)}}" target="_blank" >{{$d->art_title}} </a></h3>
             <figure><img src="{{url($d->art_thumb)}}"></figure>
             <ul>
                 <p>{{$d->art_description}}</p>
