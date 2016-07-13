@@ -118,7 +118,7 @@ return [
     | The service providers listed here will be automatically loaded on the
     | request to your application. Feel free to add your own services to
     | this array to grant expanded functionality to your applications.
-    |
+    | 「延迟」提供者，意味着除非真正需要它们所提供的服务，否则它们并不会在每一个请求中都被加载。
     */
 
     'providers' => [

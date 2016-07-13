@@ -85,7 +85,7 @@ class ArticleController extends CommonController
             Redis::sadd($key,$post->title);
         }
 
-//获取集合元素总数(如果指定键不存在返回0)
+        //获取集合元素总数(如果指定键不存在返回0)
         $nums = Redis::scard($key);
 
         if($nums>0){

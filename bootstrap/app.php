@@ -9,6 +9,11 @@
 | which serves as the "glue" for all the components of Laravel, and is
 | the IoC container for the system binding all of the various parts.
 |
+
+我们要做的第一件事是创建一个新的Laravel应用程序实例是所有组件的“粘合剂”Laravel,,IoC容器系统绑定所有的各个部分。
+
+创建服务容器实例
+
 */
 
 $app = new Illuminate\Foundation\Application(
@@ -24,8 +29,12 @@ $app = new Illuminate\Foundation\Application(
 | we will be able to resolve them when needed. The kernels serve the
 | incoming requests to this application from both the web and CLI.
 |
+|接下来,我们需要将一些重要的接口绑定到容器
+|我们能够解决这些问题。内核提供的
+|传入的请求从web和CLI这个应用程序。
 */
 
+//绑定一个”共享“类型到容器    将绑定到容器的类型处理一次，然后接下来从容器中取得的都应该是相同实例
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
     App\Http\Kernel::class
