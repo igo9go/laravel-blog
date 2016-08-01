@@ -5,12 +5,14 @@ namespace App\Http\Controllers\Home;
 use App\Http\Model\Article;
 use App\Http\Model\Category;
 use App\Http\Model\Links;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Redis;
 
 class IndexController extends CommonController
 {
     public function index()
     {
+        Arr::
         //点击量最高的6篇文章（站长推荐）
         $pics = Article::orderBy('art_view','desc')->take(6)->get();
 
