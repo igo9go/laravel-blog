@@ -12,7 +12,6 @@ class IndexController extends CommonController
 {
     public function index()
     {
-        Arr::
         //点击量最高的6篇文章（站长推荐）
         $pics = Article::orderBy('art_view','desc')->take(6)->get();
 
