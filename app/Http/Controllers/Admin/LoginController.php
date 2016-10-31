@@ -15,7 +15,6 @@ class LoginController extends CommonController
 {
     public function login()
     {
-
         if($input = Input::all()){
             $code = new \Code;
             $_code = $code->get();
@@ -29,7 +28,7 @@ class LoginController extends CommonController
             session(['user'=>$user]);
             return redirect('admin/index');
 
-        }else {
+        }else {  
             return view('admin.login');
         }
     }

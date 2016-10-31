@@ -34,7 +34,7 @@
 					</li>
 				</ul>
 			</form>
-			<p><a href="#">返回首页</a> &copy; 2016 Powered by <a href="http://www.houdunwang.com" target="_blank">http://www.houdunwang.com</a></p>
+			<p><a href="#">返回首页</a> &copy; 2016 Powered by <a href="http://www.igo9go.cn" target="_blank">http://www.igo9go.cn</a></p>
 		</div>
 	</div>
 </body>

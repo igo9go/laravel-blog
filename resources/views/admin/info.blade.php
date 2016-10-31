@@ -55,20 +55,20 @@
 </div>
 
 
-<div class="result_wrap">
-    <div class="result_title">
-        <h3>使用帮助</h3>
-    </div>
-    <div class="result_content">
-        <ul>
-            <li>
-                <label>官方交流网站：</label><span><a href="#">http://bbs.houdunwang.com</a></span>
-            </li>
-            <li>
-                <label>官方交流QQ群：</label><span><a href="#"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png"></a></span>
-            </li>
-        </ul>
-    </div>
-</div>
+<!-- <div class="result_wrap"> -->
+<!--     <div class="result_title"> -->
+<!--         <h3>使用帮助</h3> -->
+<!--     </div> -->
+<!--     <div class="result_content"> -->
+<!--         <ul> -->
+<!--             <li> -->
+<!--                 <label></label><span><a href="#"></a></span> -->
+<!--             </li> -->
+<!--             <li> -->
+<!--                 <label></label><span><a href="#"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png"></a></span> -->
+<!--             </li> -->
+<!--         </ul> -->
+<!--     </div> -->
+<!-- </div> -->
 <!--结果集列表组件 结束-->
 @endsection
